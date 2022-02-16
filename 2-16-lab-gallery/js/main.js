@@ -7,23 +7,26 @@
 // }
 
 const fetchImage = async function () {
-  const response = await fetch("https://random.dog/woof.json");
+  const response = await fetch("https://thatcopy.pw/catapi/rest/");
   const data = await response.json();
-  
-   // You have to grab the key(URL) inside the api object
+  console.log(response);
 
-  image.src = data.url; // I created an empty image on the dom and changed the src here to data.url
-  console.log(data);
+  // You have to grab the key(URL) inside the api object
 
-<<<<<<< HEAD
-  document.querySelector("h1").textContent = data.title;
-  document.querySelector("p").textContent = data.body;
-=======
-  // document.querySelector("h1").fetchImage = data.title;
-  // document.querySelector("p").fetchImage = data.body;
->>>>>>> 8c1cea4b23daf223b4fa2be366f2ef5504be95de
+  const image = document.querySelector(".image");
+  fetch("https://i.thatcopy.pw/cat/Nprmx6Y.jpg")
+    .then((response) => response.blob())
+    .then((blob) => {
+      const objectURL = URL.createObjectURL(blob);
+      image.src = objectURL;
+      console.log(image);
+    });
+
+  // // I created an empty image on the dom and changed the src here to data.url
+  //   image.src = data.url;
+  // console.log(data);
+
+  // document.querySelector(".image").fetchImage = "${response}";
 };
 
 fetchImage();
-
-// console.log("Hello world!");
