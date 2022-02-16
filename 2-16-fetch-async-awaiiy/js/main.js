@@ -7,3 +7,5 @@ const fetchData = async function () {
 };
 
 fetchData();
+
+// async stays inside of the function defined with the async keyword
