@@ -9,11 +9,14 @@
 const fetchImage = async function () {
   const response = await fetch("https://random.dog/woof.json");
   const data = await response.json();
+  
+   // You have to grab the key(URL) inside the api object
 
+  image.src = data.url; // I created an empty image on the dom and changed the src here to data.url
   console.log(data);
 
-  document.querySelector("h1").fetchImage = data.title;
-  document.querySelector("p").fetchImage = data.body;
+  // document.querySelector("h1").fetchImage = data.title;
+  // document.querySelector("p").fetchImage = data.body;
 };
 
 fetchImage();
