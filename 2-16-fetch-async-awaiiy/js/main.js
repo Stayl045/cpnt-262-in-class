@@ -1,5 +1,9 @@
 console.log("hello World");
 
-const data = fetch("https://jsonplaceholder.typicode.com/posts/9");
+const fetchData = async function () {
+  const response = await fetch("https://jsonplaceholder.typicode.com/posts/9");
+  const data = await response.json();
+  console.log(data.id);
+};
 
-console.log(data.title);
+fetchData();
