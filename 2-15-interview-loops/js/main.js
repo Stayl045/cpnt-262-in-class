@@ -9,3 +9,12 @@ for (let i = 1; i <= 100; i++) {
     console.log(i);
   }
 }
+
+// Alternative Way:
+// for (let i = 1; i <= 100; i++) {
+//   let response = "";
+//   if (i % 3 === 0) response = "fizz";
+//   if (i % 5 === 0) response += "buzz";
+
+//   console.log(response || i);
+// }
