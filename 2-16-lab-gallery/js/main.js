@@ -12,8 +12,8 @@ const fetchImage = async function () {
 
   console.log(data);
 
-  document.querySelector("h1").fetchImage = data.title;
-  document.querySelector("p").fetchImage = data.body;
+  document.querySelector("h1").textContent = data.title;
+  document.querySelector("p").textContent = data.body;
 };
 
 fetchImage();
